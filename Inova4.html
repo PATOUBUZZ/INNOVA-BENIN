@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INNOVA SOLUTION | Conception Mécanique</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header img {
+      height: 50px;
+      width: 50px;
+      object-fit: contain;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      flex-grow: 1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #005599;
+      overflow-x: auto;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background-color: #003f7f;
+    }
+
+    /* Carrousel */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+    }
+
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    /* Boutons réseaux sociaux */
+    .social-buttons {
+      max-width: 1000px;
+      margin: 1rem auto 0 auto;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      background-color: #2daa5b; /* WhatsApp vert */
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .social-buttons a.facebook {
+      background-color: #1877F2; /* Bleu Facebook */
+    }
+
+    .social-buttons a:hover {
+      opacity: 0.8;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #003366;
+    }
+
+    .services, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- En-tête (header) -->
+<header style="display: flex; align-items: center; padding: 10px 20px; background-color: #095689;">
+  <!-- Logo à gauche -->
+  <img src="innologo.png" alt="Logo INNOVA" style="height: 60px; margin-right: 15px;">
+
+  <!-- Texte superposé à droite du logo -->
+  <div style="display: flex; flex-direction: column;">
+    <h1 style="margin: 0; font-size: 28px; color: #ffffff;">INNOVA</h1>
+    <h5 style="margin: 0; font-weight: normal; color: #ffffff;">Centre de fabrication et de formation mécanique</h5>
+    <small style="color: #ffffff;">Autorisation: 042/MESTFP/DC/SGM/DIPIQ/DPAF/SA/028SGG23</small>
+  </div>
+</header>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="https://mico-trading-fx-9btk.vercel.app/">S'inscrire</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Carrousel -->
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide"><img src="PSX_20250221_130120.jpg" alt="Image 1" /></div>
+      <div class="carousel-slide"><img src="PSX_20250222_021149.jpg" alt="Image 2" /></div>
+      <div class="carousel-slide"><img src="flyers.jpg" alt="Image 3" /></div>
+      <div class="carousel-slide"><img src="innova2.1.png" alt="Image 4" /></div>
+      <div class="carousel-slide"><img src="PUB Ecole.jpg" alt="Image 5" /></div>
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="prevSlide()">‹</button>
+      <button class="carousel-button" onclick="nextSlide()">›</button>
+    </div>
+  </div>
+
+  <!-- Boutons WhatsApp et Facebook -->
+  <div class="social-buttons">
+    <a href="https://wa.me/2290161633422" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="https://facebook.com/innovasolution" target="_blank" rel="noopener noreferrer" class="facebook">Facebook</a>
+  </div>
+
+  <section id="accueil" class="section">
+    <h2>Bienvenue chez INNOVA SOLUTION</h2>
+    <p>Nous sommes spécialisés dans la conception mécanique, la modélisation 3D, le prototypage et l’innovation technique pour vos projets industriels et mécaniques.</p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Dessin technique</h3>
+        <p>Plans précis pour vos projets mécaniques.</p>
+      </div>
+      <div class="card">
+        <h3>Modélisation 3D</h3>
+        <p>Conception assistée par ordinateur (CAO) avec rendu réaliste.</p>
+      </div>
+      <div class="card">
+        <h3>Simulation mécanique</h3>
+        <p>Analyse des contraintes, mouvements et optimisations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets" class="section">
+    <h2>Réalisations</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Support moteur sur mesure</h3>
+        <p>Conception optimisée pour l’industrie automobile.</p>
+      </div>
+      <div class="card">
+        <h3>Système de transmission</h3>
+        <p>Étude et modélisation d’un mécanisme complexe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p><strong>Mail :</strong> Landogbeprudence@gmail.com</p>
+    <p><strong>Téléphone:</strong> +229 0161633422</p>
+    <p><strong>Adresse :</strong> BÉNIN, Abomey-Calavi, En face Bresilac.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 INNOVA SOLUTION - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const track = document.getElementById("carouselTrack");
+    const slides = document.querySelectorAll(".carousel-slide");
+    let currentSlide = 0;
+
+    function updateSlide() {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide();
+    }
+
+    setInterval(nextSlide, 4000); // défilement automatique toutes les 4 secondes
+  </script>
+</body>
+</html>
